@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:home_ease/home/cubit/home_cubit.dart';
 import 'package:home_ease/home/ui/home_screen.dart';
 import 'package:home_ease/theme/theme.dart';
 
@@ -11,11 +13,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: SHTheme.dark,
-      home: const HomeScreen(),
+    return BlocProvider(
+      create: (context) => HomeCubit(),
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: SHTheme.dark,
+        home: const HomeScreen(),
+      ),
     );
   }
 }

@@ -1,6 +1,22 @@
-part of 'home_cubit.dart';
+import 'package:equatable/equatable.dart';
 
-@immutable
-sealed class HomeState {}
+class HomeState extends Equatable {
+  final double pageIndex;
+  final int selectedIndex;
 
-final class HomeInitial extends HomeState {}
+  const HomeState({required this.pageIndex, required this.selectedIndex});
+
+  factory HomeState.initial() {
+    return const HomeState(pageIndex: 0, selectedIndex: 1);
+  }
+
+  HomeState copyWith({double? pageIndex, int? selectedIndex}) {
+    return HomeState(
+      pageIndex: pageIndex ?? this.pageIndex,
+      selectedIndex: selectedIndex ?? this.selectedIndex,
+    );
+  }
+
+  @override
+  List<Object> get props => [pageIndex, selectedIndex];
+}
