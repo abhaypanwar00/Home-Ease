@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:home_ease/home/ui/page_indicator.dart';
-import 'package:home_ease/home/ui/rooms_page_view.dart';
+import 'package:home_ease/home/ui/widgets/page_indicator.dart';
+import 'package:home_ease/home/ui/screens/rooms_page_view.dart';
 import 'package:home_ease/home/cubit/home_cubit.dart';
 import 'package:home_ease/home/cubit/home_state.dart';
 import 'package:home_ease/theme/lighted_background.dart';
@@ -18,6 +18,7 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          centerTitle: true,
           title: Text(
             "Home Ease",
             style: Theme.of(context).textTheme.displayMedium,

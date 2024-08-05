@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:home_ease/home/cubit/home_cubit.dart';
-import 'package:home_ease/home/ui/home_screen.dart';
+import 'package:home_ease/home/ui/screens/home_screen.dart';
 import 'package:home_ease/theme/theme.dart';
 
 void main() {
@@ -13,8 +13,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => HomeCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => HomeCubit()),
+      ],
       child: MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,

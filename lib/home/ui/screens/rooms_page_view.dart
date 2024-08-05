@@ -1,0 +1,67 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:home_ease/home/cubit/home_cubit.dart';
+import 'package:home_ease/home/ui/widgets/room_card.dart';
+import 'package:home_ease/room_detail/ui/screens/room_detail_screen.dart';
+
+class RoomsPageView extends StatelessWidget {
+  final PageController controller;
+
+  final roomNames = [
+    'LIVING ROOM',
+    'DINING ROOM',
+    'BED ROOM',
+    'KITCHEN',
+    'BATHROOM',
+  ];
+
+  final List<String> imagePaths = [
+    'assets/images/living_room.jpeg',
+    'assets/images/dining_room.jpeg',
+    'assets/images/bed_room.jpg',
+    'assets/images/kitchen.jpg',
+    'assets/images/bathroom.jpg',
+  ];
+
+  RoomsPageView({super.key, required this.controller});
+
+  @override
+  Widget build(BuildContext context) {
+    return PageView.builder(
+      controller: controller,
+      itemCount: roomNames.length,
+      onPageChanged: (index) {
+        context.read<HomeCubit>().updatePageIndex(index.toDouble());
+      },
+      itemBuilder: (_, index) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          child: GestureDetector(
+            onVerticalDragUpdate: (details) {
+              if (details.primaryDelta! < -10) {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => RoomDetailScreen(
+                      imagePaths: imagePaths,
+                      roomNames: roomNames,
+                      index: index,
+                    ),
+                  ),
+                );
+              }
+            },
+            onTap: () {},
+            child: Hero(
+              tag: 'roomCard-$index',
+              child: RoomCard(
+                imagePaths: imagePaths,
+                roomNames: roomNames,
+                index: index,
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+}

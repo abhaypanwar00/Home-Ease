@@ -20,4 +20,5 @@ abstract class SHIcons {
   static const IconData snowFlake = CupertinoIcons.snow;
   static const IconData wind = CupertinoIcons.wind;
   static const IconData air = FontAwesome5.air_freshener;
+  static const IconData airQuality = FontAwesome5.wind;
 }
