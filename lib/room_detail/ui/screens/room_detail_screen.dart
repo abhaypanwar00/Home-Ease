@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:home_ease/home/ui/widgets/room_card.dart';
-import 'package:home_ease/room_detail/ui/widgets/divider.dart';
+import 'package:home_ease/widgets/divider.dart';
 import 'package:home_ease/room_detail/ui/widgets/info_column.dart';
 import 'package:home_ease/room_detail/ui/widgets/info_row.dart';
 import 'package:home_ease/theme/colors.dart';
 import 'package:home_ease/theme/icons.dart';
+import 'package:home_ease/update_room_settings/ui/screens/update_room_settings.dart';
 
 class RoomDetailScreen extends StatelessWidget {
   final List<String> imagePaths;
@@ -76,7 +77,7 @@ class RoomDetailScreen extends StatelessWidget {
                             ),
                             InfoColumn(
                               icon: SHIcons.fan,
-                              text1: "Air Conditioner",
+                              text1: "Air-Conditioning",
                               text2: "OFF",
                               color: SHColors.textColor,
                             ),
@@ -109,7 +110,16 @@ class RoomDetailScreen extends StatelessWidget {
                       Navigator.of(context).pop();
                     }
                   },
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => UpdateRoomSettings(
+                          roomName: roomNames[index],
+                          image: imagePaths[index],
+                        ),
+                      ),
+                    );
+                  },
                   child: Hero(
                     tag: 'roomCard-$index',
                     child: RoomCard(

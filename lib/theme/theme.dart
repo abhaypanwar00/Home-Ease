@@ -32,6 +32,11 @@ abstract class SHTheme {
         fontSize: 40,
         color: SHColors.textColor,
       ),
+      titleMedium: GoogleFonts.montserrat(
+        fontSize: 17,
+        fontWeight: FontWeight.w700,
+        color: Colors.white,
+      ),
     ),
     appBarTheme: const AppBarTheme(
       elevation: 0,
