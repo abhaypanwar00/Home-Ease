@@ -44,6 +44,7 @@ dependencies:
   equatable: ^2.0.5
   ui_common:
     git: https://github.com/brocodev/ui_common.git
+  fl_chart: ^0.68.0
 
 dev_dependencies:
   flutter_test:

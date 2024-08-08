@@ -15,32 +15,42 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(15),
       child: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: onTap,
         selectedItemColor: Colors.white,
         unselectedItemColor: SHColors.hintColor,
         backgroundColor: SHColors.backgroundColor,
+        showUnselectedLabels: true,
         items: const [
           BottomNavigationBarItem(
             icon: Padding(
-              padding: EdgeInsets.all(8),
-              child: Icon(SHIcons.stats),
+              padding: EdgeInsets.all(5),
+              child: Icon(
+                SHIcons.stats,
+                size: 30,
+              ),
             ),
             label: 'STATISTICS',
           ),
           BottomNavigationBarItem(
             icon: Padding(
-              padding: EdgeInsets.all(8),
-              child: Icon(SHIcons.home),
+              padding: EdgeInsets.all(5),
+              child: Icon(
+                SHIcons.home,
+                size: 30,
+              ),
             ),
             label: 'HOME',
           ),
           BottomNavigationBarItem(
             icon: Padding(
-              padding: EdgeInsets.all(8),
-              child: Icon(SHIcons.settings),
+              padding: EdgeInsets.all(5),
+              child: Icon(
+                SHIcons.settings,
+                size: 30,
+              ),
             ),
             label: 'SETTINGS',
           ),

@@ -3,14 +3,21 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:home_ease/theme/colors.dart';
 
-class InternetCard extends StatelessWidget {
-  const InternetCard({
+class StatsCard extends StatelessWidget {
+  const StatsCard({
     super.key,
+    required this.heading,
+    required this.subHeading,
+    required this.sideText,
   });
+
+  final String heading;
+  final String subHeading;
+  final String sideText;
 
   @override
   Widget build(BuildContext context) {
-    log("Internet Card Build");
+    log("Stats Card Build");
     return Card(
       color: SHColors.cardColor,
       elevation: 10,
@@ -23,11 +30,11 @@ class InternetCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Internet",
+                  heading,
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
                 Text(
-                  "Active",
+                  subHeading,
                   style: Theme.of(context)
                       .textTheme
                       .bodyLarge!
@@ -37,7 +44,7 @@ class InternetCard extends StatelessWidget {
             ),
             Center(
               child: Text(
-                "250 Mbps",
+                sideText,
                 style: Theme.of(context).textTheme.titleMedium,
               ),
             ),

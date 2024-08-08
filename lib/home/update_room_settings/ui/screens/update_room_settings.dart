@@ -4,7 +4,7 @@ import 'package:home_ease/theme/icons.dart';
 import 'package:home_ease/home/update_room_settings/ui/widgets/ac_card.dart';
 import 'package:home_ease/home/update_room_settings/ui/widgets/back_button.dart';
 import 'package:home_ease/home/update_room_settings/ui/widgets/info_card.dart';
-import 'package:home_ease/home/update_room_settings/ui/widgets/internet_card.dart';
+import 'package:home_ease/widgets/stats_card.dart';
 import 'package:home_ease/home/update_room_settings/ui/widgets/light_intensity_card.dart';
 
 class UpdateRoomSettings extends StatelessWidget {
@@ -118,7 +118,11 @@ class UpdateRoomSettings extends StatelessWidget {
                     const SizedBox(height: 20),
                     const AirConditioningCard(),
                     const SizedBox(height: 20),
-                    const InternetCard(),
+                    const StatsCard(
+                      heading: "Inetrnet",
+                      subHeading: "Active",
+                      sideText: "250 Mbps",
+                    ),
                   ],
                 ),
               ),
