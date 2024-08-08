@@ -1,11 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:home_ease/theme/icons.dart';
-import 'package:home_ease/update_room_settings/ui/widgets/ac_card.dart';
-import 'package:home_ease/update_room_settings/ui/widgets/back_button.dart';
-import 'package:home_ease/update_room_settings/ui/widgets/info_card.dart';
-import 'package:home_ease/update_room_settings/ui/widgets/internet_card.dart';
-import 'package:home_ease/update_room_settings/ui/widgets/light_intensity_card.dart';
+import 'package:home_ease/home/update_room_settings/ui/widgets/ac_card.dart';
+import 'package:home_ease/home/update_room_settings/ui/widgets/back_button.dart';
+import 'package:home_ease/home/update_room_settings/ui/widgets/info_card.dart';
+import 'package:home_ease/home/update_room_settings/ui/widgets/internet_card.dart';
+import 'package:home_ease/home/update_room_settings/ui/widgets/light_intensity_card.dart';
 
 class UpdateRoomSettings extends StatelessWidget {
   const UpdateRoomSettings({

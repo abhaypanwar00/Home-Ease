@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:home_ease/home/cubit/home_cubit.dart';
-import 'package:home_ease/home/ui/widgets/room_card.dart';
-import 'package:home_ease/room_detail/ui/screens/room_detail_screen.dart';
+import 'package:home_ease/home/dashboard/cubit/dashboard_cubit.dart';
+import 'package:home_ease/home/dashboard/ui/widgets/room_card.dart';
+import 'package:home_ease/home/room_detail/ui/screens/room_detail_screen.dart';
 
 class RoomsPageView extends StatelessWidget {
   final PageController controller;
@@ -31,7 +31,7 @@ class RoomsPageView extends StatelessWidget {
       controller: controller,
       itemCount: roomNames.length,
       onPageChanged: (index) {
-        context.read<HomeCubit>().updatePageIndex(index.toDouble());
+        context.read<DashboardCubit>().updatePageIndex(index.toDouble());
       },
       itemBuilder: (_, index) {
         return Padding(

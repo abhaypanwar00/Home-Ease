@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:home_ease/theme/colors.dart';
-import 'package:home_ease/update_room_settings/cubit/update_room_settings_cubit.dart';
+import 'package:home_ease/home/update_room_settings/cubit/update_room_settings_cubit.dart';
 import 'package:home_ease/widgets/divider.dart';
 
 class InfoCard extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'home_state.dart';
+import 'dashboard_state.dart';
 
-class HomeCubit extends Cubit<HomeState> {
-  HomeCubit() : super(HomeState.initial());
+class DashboardCubit extends Cubit<DashboardState> {
+  DashboardCubit() : super(DashboardState.initial());
 
   void updatePageIndex(double pageIndex) {
     emit(state.copyWith(pageIndex: pageIndex));
