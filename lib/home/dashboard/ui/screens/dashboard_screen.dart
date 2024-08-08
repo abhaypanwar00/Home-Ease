@@ -80,7 +80,7 @@ class DashboardScreen extends StatelessWidget {
               builder: (context, state) {
                 log("Page Indicator ${state.pageIndex + 1}");
                 return Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 15),
+                  padding: const EdgeInsets.symmetric(vertical: 20),
                   child: PageIndicator(pageIndex: state.pageIndex, length: 5),
                 );
               },

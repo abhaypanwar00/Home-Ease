@@ -19,11 +19,6 @@ class StatisticsScreen extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: screenWidth * 0.05),
-              Text(
-                "STATISTICS",
-                style: Theme.of(context).textTheme.bodyMedium,
-              ),
-              SizedBox(height: screenWidth * 0.05),
               Center(
                 child: SizedBox(
                   height: MediaQuery.of(context).size.height * 0.3,

@@ -26,12 +26,12 @@ class InfoColumn extends StatelessWidget {
         ),
         Text(
           text1,
-          style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: color),
+          style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: color),
         ),
         Text(
           text2,
           style: GoogleFonts.montserrat(
-            fontSize: 18,
+            fontSize: 16,
             fontWeight: FontWeight.w700,
             color: color,
           ),

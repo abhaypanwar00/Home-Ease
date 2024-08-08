@@ -32,7 +32,7 @@ class InfoRow extends StatelessWidget {
         Text(
           text2,
           style: GoogleFonts.montserrat(
-            fontSize: 20,
+            fontSize: 18,
             fontWeight: FontWeight.w700,
           ),
         )

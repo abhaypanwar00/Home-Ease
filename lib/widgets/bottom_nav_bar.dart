@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:home_ease/theme/icons.dart';
 import 'package:home_ease/theme/colors.dart';
+import 'package:home_ease/theme/icons.dart';
 
 class BottomNavBar extends StatelessWidget {
   final int currentIndex;
@@ -15,46 +15,50 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15),
-      child: BottomNavigationBar(
-        currentIndex: currentIndex,
-        onTap: onTap,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: SHColors.hintColor,
-        backgroundColor: SHColors.backgroundColor,
-        showUnselectedLabels: true,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: EdgeInsets.all(5),
-              child: Icon(
-                SHIcons.stats,
-                size: 30,
-              ),
-            ),
-            label: 'STATISTICS',
-          ),
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: EdgeInsets.all(5),
-              child: Icon(
-                SHIcons.home,
-                size: 30,
-              ),
-            ),
-            label: 'HOME',
-          ),
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: EdgeInsets.all(5),
-              child: Icon(
-                SHIcons.settings,
-                size: 30,
-              ),
-            ),
-            label: 'SETTINGS',
-          ),
+      padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.015),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          _buildNavItem(context, SHIcons.stats, 'STATISTICS', 0),
+          _buildNavItem(context, SHIcons.home, 'HOME', 1),
+          _buildNavItem(context, SHIcons.settings, 'SETTINGS', 2),
         ],
+      ),
+    );
+  }
+
+  Widget _buildNavItem(
+    BuildContext context,
+    IconData icon,
+    String label,
+    int index,
+  ) {
+    final bool isSelected = currentIndex == index;
+
+    return InkWell(
+      onTap: () => onTap(index),
+      splashFactory: NoSplash.splashFactory,
+      child: Padding(
+        padding: const EdgeInsets.all(5),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              icon,
+              size: 30,
+              color: isSelected ? Colors.white : SHColors.hintColor,
+            ),
+            const SizedBox(height: 5),
+            Text(
+              label,
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    color: isSelected ? Colors.white : SHColors.hintColor,
+                    fontSize: 12,
+                  ),
+            ),
+          ],
+        ),
       ),
     );
   }
