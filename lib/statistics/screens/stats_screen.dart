@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:home_ease/statistics/stats_data.dart';
+import 'package:home_ease/statistics/data/stats_data.dart';
 import 'package:home_ease/widgets/stats_card.dart';
-import 'package:home_ease/statistics/bar_graph.dart';
+import 'package:home_ease/statistics/widgets/bar_graph.dart';
 import 'package:home_ease/theme/lighted_background.dart';
 
 class StatisticsScreen extends StatelessWidget {

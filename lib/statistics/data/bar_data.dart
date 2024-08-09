@@ -1,4 +1,4 @@
-import 'package:home_ease/statistics/individual_bar.dart';
+import 'package:home_ease/statistics/widgets/individual_bar.dart';
 
 class BarData {
   final double janAmount;

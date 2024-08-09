@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:home_ease/settings/devices_card.dart';
-import 'package:home_ease/settings/profile_card.dart';
-import 'package:home_ease/settings/settings_info_card.dart';
+import 'package:home_ease/settings/widgets/devices_card.dart';
+import 'package:home_ease/settings/widgets/profile_card.dart';
+import 'package:home_ease/settings/widgets/settings_info_card.dart';
 import 'package:home_ease/theme/lighted_background.dart';
 
 class SettingsScreen extends StatelessWidget {

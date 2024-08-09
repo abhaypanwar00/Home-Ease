@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:home_ease/home/dashboard/cubit/dashboard_cubit.dart';
 import 'package:home_ease/home/dashboard/ui/widgets/room_card.dart';
-import 'package:home_ease/home/room_detail/ui/screens/room_detail_screen.dart';
+import 'package:home_ease/home/room_detail/screens/room_detail_screen.dart';
 
 class RoomsPageView extends StatelessWidget {
   final PageController controller;

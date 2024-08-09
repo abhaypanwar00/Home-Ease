@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:home_ease/theme/colors.dart';
 
@@ -14,6 +16,7 @@ class PageIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final index = pageIndex;
+    log("Page Indicator ${index + 1}");
     return SizedBox(
       height: 12,
       child: Stack(

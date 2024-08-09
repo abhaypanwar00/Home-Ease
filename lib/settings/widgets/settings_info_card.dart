@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:home_ease/theme/colors.dart';
 
@@ -15,6 +17,7 @@ class SettingsInfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log("Settings Info Card");
     return Card(
       color: SHColors.cardColor,
       elevation: 10,

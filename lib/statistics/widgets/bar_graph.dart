@@ -1,6 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:home_ease/statistics/bar_data.dart';
+import 'package:home_ease/statistics/data/bar_data.dart';
 import 'package:home_ease/theme/colors.dart';
 
 class MyBarGraph extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:home_ease/home/dashboard/ui/widgets/room_card.dart';
 import 'package:home_ease/widgets/divider.dart';
-import 'package:home_ease/home/room_detail/ui/widgets/info_column.dart';
-import 'package:home_ease/home/room_detail/ui/widgets/info_row.dart';
+import 'package:home_ease/home/room_detail/widgets/info_column.dart';
+import 'package:home_ease/home/room_detail/widgets/info_row.dart';
 import 'package:home_ease/theme/colors.dart';
 import 'package:home_ease/theme/icons.dart';
 import 'package:home_ease/home/update_room_settings/ui/screens/update_room_settings.dart';

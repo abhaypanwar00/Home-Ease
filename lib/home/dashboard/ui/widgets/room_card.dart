@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_ease/home/dashboard/ui/widgets/shimmer_arrows.dart';
 
 class RoomCard extends StatelessWidget {
   const RoomCard({
@@ -56,6 +57,12 @@ class RoomCard extends StatelessWidget {
               ),
             ),
           ),
+        ),
+        const Positioned(
+          left: 0,
+          right: 0,
+          bottom: 30,
+          child: ShimmerArrows(),
         )
       ],
     );
