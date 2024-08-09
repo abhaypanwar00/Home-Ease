@@ -116,6 +116,7 @@ class RoomDetailScreen extends StatelessWidget {
                         builder: (context) => UpdateRoomSettings(
                           roomName: roomNames[index],
                           image: imagePaths[index],
+                          index: index,
                         ),
                       ),
                     );

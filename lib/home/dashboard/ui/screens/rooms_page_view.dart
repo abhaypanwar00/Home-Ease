@@ -8,17 +8,17 @@ class RoomsPageView extends StatelessWidget {
   final PageController controller;
 
   final roomNames = [
-    'LIVING ROOM',
-    'DINING ROOM',
     'BED ROOM',
+    'DINING ROOM',
+    'LIVING ROOM',
     'KITCHEN',
     'BATHROOM',
   ];
 
   final List<String> imagePaths = [
-    'assets/images/living_room.jpeg',
-    'assets/images/dining_room.jpeg',
     'assets/images/bed_room.jpg',
+    'assets/images/dining_room.jpeg',
+    'assets/images/living_room.jpeg',
     'assets/images/kitchen.jpg',
     'assets/images/bathroom.jpg',
   ];
